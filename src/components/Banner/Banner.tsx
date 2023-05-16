@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { getBanner } from '../../server/banner';
+import { getBanner } from '../../server/homePage/banner';
 import { Carousel } from 'antd';
 import { bannerType } from '../../Type/requestType';
 import { CarouselRef } from 'antd/es/carousel';
@@ -35,7 +35,7 @@ const Banner = () => {
     >
       <div className='w-[982px] h-[285px] mx-auto relative'>
         <a
-          className='absolute block top-1/2 -left-20 w-[37px] h-[63px] -mt-[31px] bg-banner-icon'
+          className='absolute block top-1/2 -left-20 w-[37px] h-[63px] -mt-[31px] bg-banner-icon cursor-pointer'
           style={{ backgroundPosition: '0 -360px' }}
           onClick={prevLink}
         ></a>
@@ -52,12 +52,13 @@ const Banner = () => {
                   src={item.imageUrl}
                   alt=''
                   className='w-[730px] h-[285px]'
+                  key={item.targetType}
                 />
               );
             })}
         </Carousel>
         <a
-          className=' absolute block top-1/2  -right-20 w-[37px] h-[63px] -mt-[31px] bg-banner-icon'
+          className=' absolute block top-1/2  -right-20 w-[37px] h-[63px] -mt-[31px] bg-banner-icon cursor-pointer'
           style={{ backgroundPosition: '0 -508px' }}
           onClick={nextLink}
         ></a>

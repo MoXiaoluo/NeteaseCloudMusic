@@ -9,6 +9,7 @@ export default {
       backgroundImage: {
         'app-logo': "url('/src/assets/images/topbar.png')",
         'banner-icon': "url('/src/assets/images/banner.png')",
+        'common-icon': "url('/src/assets/images/index.png')",
       },
     },
   },
